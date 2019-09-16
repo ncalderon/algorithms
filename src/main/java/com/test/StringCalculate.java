@@ -3,6 +3,8 @@ package com.test;
 import java.util.LinkedList;
 
 public class StringCalculate {
+
+
     private static int applyOperation(String op, int b, int a)
     {
         switch (op)
@@ -32,6 +34,29 @@ public class StringCalculate {
             return true;
     }
 
+    /**
+     * Challenge
+     * Have the function StringCalculate(str) take the str parameter being passed and evaluate the mathematical expression within in.
+     * The double asterisks (**) represent exponentiation.
+     *
+     * For example, if str were "(2+(3-1)*3)**3" the output should be 512. Another example: if str is "(2-0)(6/2)" the output should be 6. T
+     * here can be parenthesis within the string so you must evaluate it properly according to the rules of arithmetic.
+     * The string will contain the operators: +, -, /, *, (, ), and **. If you have a string like this: #/#*# or #+#(#)/#, then evaluate from left to right.
+     * So divide then multiply, and for the second one multiply, divide, then add. The evaluations will be such that there will not be any decimal operations,
+     * so you do not need to account for rounding.
+     *
+     * Sample Test Cases
+     * Input:"6*(4/2)+3*1"
+     *
+     * Output:15
+     *
+     * Input:"100*2**4"
+     *
+     * Output:1600
+     *
+     * @param str
+     * @return
+     */
     public static String StringCalculate(String str) {
         char[] tokens = str.toCharArray();
 
